@@ -1,8 +1,3 @@
-// adding new chat docs
-// setting up a real-time listener to get new chats
-// updating usernames
-// updating the room
-
 class Chatroom {
     constructor(room, username){
         this.room = room;
@@ -52,17 +47,4 @@ class Chatroom {
     }
 }
 
-const chatroom = new Chatroom('general', 'shaun');
 
-chatroom.getChats((data) => {
-    console.log(data);
-});
-
-setTimeout(() => {
-    chatroom.updateRoom('gaming');
-    chatroom.updateName('yoshi');
-    chatroom.getChats((data) => {
-        console.log(data);
-    });
-    chatroom.addChat('howdy hiiii!');
-}, 3000);
